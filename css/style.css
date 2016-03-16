@@ -1,8 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Great+Vibes);
+    @import url(https://fonts.googleapis.com/css?family=Great+Vibes);
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
 
-
 /*  Global  */
+
 body {
   background: url(https://raw.githubusercontent.com/connorbacon9/connorbacon9.github.io/master/img/styletile/zwartevilt.png);
 }
@@ -19,11 +19,11 @@ body {
 }
 
 
-
 /* Navigation */
+
 a:link,
 a:visited {
-  padding: 4px 0;
+  padding: 2px 0;
   color: #696969;
   text-decoration: none;
 }
@@ -33,19 +33,21 @@ a:hover {
   transition: background .5s;
 }
 
-
-nav {
-  width: 100%;
-  padding: .1%;
-  font-size: 1.2em;
-  margin-bottom: 5%;
- 
+.navwrap {
+  margin: 0 auto;
+  min-width: 14.5%;
+  left: 0;
+  position: fixed;
+  margin-top: 15%;
+  background: black;
+  display: block;
+  border-radius: 20px;
 }
 
 nav ul li {
-  display: inline;
-  padding-left: 21%;
-  position: relative;
+  font-size: 1.5em;
+  display: block;
+  padding-left: 20px;
 }
 
 
@@ -69,7 +71,7 @@ h2 {
   font-size: 2.25em;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
-  margin-right: 16%;
+  margin-top: 10%;
 }
 
 h3 {
@@ -77,8 +79,8 @@ h3 {
   font-family: 'Great Vibes', cursive;
   font-weight: 300;
   font-size: 200%;
-  padding-right: 28%;
   text-align: center;
+  margin-top: 8%;
 }
 
 
@@ -94,6 +96,7 @@ header {
   width: 100%;
   float: left;
   margin-bottom: 3%;
+  margin-top: 2%;
 }
 
 header img {
@@ -101,54 +104,79 @@ header img {
   margin-right: 1%;
 }
 
-
 header img,
 header h1 {
   float: left;
 }
 
+#homepic {
+  display: block;
+  margin: 0 auto;
+  height: 500px;
+  width: 450px;
+}
 
 /* Sections A and B */
+
+.wrapper {
+  width: 55%;
+  margin: 0 auto;
+}
 
 section {
   padding-top: 2%;
   padding-bottom: 2%;
 }
 
-#a {
-  width: 58%;
-  margin-left: 25%;
-  float: left;
-  text-alight: center;
-}
-
-#a p {
-  max-width: 87%;
-}
-
-#a h3 {
-  padding-left: 12%;
-}
-
 #a img {
-  max-width: 43%;
-  height: auto;
-  margin: 0 27%;
-  
+  position: relative;
+  text-align: center;
 }
 
-#b {
-  width: 58%;
-  margin-left: 25%;
-  float: left;
+#contact {
+  text-align: center;
+  padding-top: 30%;
 }
 
-#b p {
-  max-width: 87%;
+
+/*   Lightbox   */
+
+.portwrap {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
 }
 
-#b h3 {
-  margin-left: 14%;
+figure {
+  display: inline;
+  position;
+  relative;
+  height: 100px;
+  width: 300px;
+  overflow: hidden;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+  margin-top: 2%;
+}
+
+.lightbox:target {
+  outline: none;
+  display: block;
 }
 
 
@@ -165,83 +193,52 @@ footer p {
 }
 
 footer ul li {
-  display: inline; 
+  display: inline;
   padding-left: 3%;
   position: relative;
   float: right;
 }
 
 
-
-
 /* Media Queries */
 
+
 /*  Tablet Media Query  */
-  @media screen and (max-width: 768px) {
-  
+
+@media screen and (max-width: 768px) {
   body {
     margin: 0 auto;
     background: #333;
   }
-  
-  
-/*  Nav  */
-  nav {
-    float: left;
-    width: 100%;
-    padding-left: 65%;
-  }
-  
-  nav ul{
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li {
-    display: block;
+  /*  Nav  */
+  .navwrap {
+    background: none;
+    margin-left: 68%;
   }
   
   header nav li {
     display: block;
     width: 100%;
     list-style: none;
-  }
-
-
-
-/* Mobile Media Query */
-@media screen and (max-width: 420px) {
-  
-  body {
-    margin: 0 auto;
-    background: #333;
-  }
-  
-  main {
-    margin: 0 auto;
   }
  
   
-/*  Nav  */
-  nav {
-    float: left;
-    width: 100%;
-  }
   
-  nav ul{
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li {
-    display: block;
-  }
-  
-  header nav li {
-    display: block;
-    width: 100%;
-    list-style: none;
-  }
-  
-  
-
+  /* Mobile Media Query */
+  @media screen and (max-width: 420px) {
+    body {
+      margin: 0 auto;
+      background: #333;
+    }
+    main {
+      margin: 0 auto;
+    }
+    /*  Nav  */
+    .navwrap {
+      background: none;
+      float: right;
+    }
+    nav {
+      
+      position: absolute;
+    }

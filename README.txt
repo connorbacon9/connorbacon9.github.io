@@ -1,3 +1,5 @@
-A Pen created at CodePen.io. You can find this one at http://codepen.io/connorbacon9/pen/RrpoKR.
+A Pen created at CodePen.io. You can find this one at http://codepen.io/connorbacon9/pen/obKEJO.
 
- My Homepage.
+ Resume/Bio for Final website
+
+Lightbox credit to Gregory Schier

@@ -113,7 +113,7 @@ header h1 {
   display: block;
   margin: 0 auto;
   height: 500px;
-  width: 450px;
+  max-width: 450px;
 }
 
 /* Sections A and B */
@@ -216,6 +216,11 @@ footer ul li {
     margin-left: 68%;
   }
   
+  .homepic {
+    height: 150px;
+    width: 100px;
+  }
+  
   header nav li {
     display: block;
     width: 100%;
@@ -238,6 +243,12 @@ footer ul li {
       background: none;
       float: right;
     }
+    
+    .homepic {
+    height: 50px;
+    width: 40px;
+  }
+    
     nav {
       
       position: absolute;
